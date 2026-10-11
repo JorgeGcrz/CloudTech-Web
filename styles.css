@@ -387,3 +387,17 @@ body {
     }
 
 }
+
+/* Etiqueta del proyecto académico */
+.etiqueta-proyecto {
+    display: inline-block;
+    margin: 10px 0 18px;
+    padding: 8px 14px;
+    border: 1px solid #38bdf8;
+    border-radius: 20px;
+    color: #7dd3fc;
+    background-color: rgba(56, 189, 248, 0.1);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
