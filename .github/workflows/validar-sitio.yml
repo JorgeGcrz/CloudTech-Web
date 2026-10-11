@@ -1,0 +1,31 @@
+
+name: Validar sitio CloudTech
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar codigo del repositorio
+        uses: actions/checkout@v4
+
+      - name: Verificar archivos principales
+        run: |
+          test -f index.html
+          test -f styles.css
+          test -f script.js
+          echo "Los archivos principales existen."
+
+      - name: Comprobar referencias HTML
+        run: |
+          grep -q 'styles.css' index.html
+          grep -q 'script.js' index.html
+          echo "Las referencias CSS y JavaScript existen."
